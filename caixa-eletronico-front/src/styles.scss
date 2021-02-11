@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~bootstrap-utilities/bootstrap-utilities";
+@import "~bootstrap-4-grid/css/grid.css";
+@import '~ngx-toastr/toastr';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-elevation-z6 {
+  box-shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 0 6px 10px 0 rgb(0 0 0 / 14%), 0 1px 18px 0 rgb(0 0 0 / 12%);
+}
+
+footer{
+  flex-shrink: 0;
+  flex-grow: 0;
+  background: #eee;
+  padding: 3px 15px;
+}
+
+mat-card {
+    max-width: 800px;
+    margin: 2em auto;
+    text-align: center;
+  }
+
+  mat-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .info-snackbar {
+    background: #2196F3;
+  }
+
+  .atencion-snackbar {
+    background: #d7e60c;
+  }
+
+  .error-snackbar {
+    background: #ca1d06;
+  }
+
+  .success-snackbar {
+    background: #3ec409;
+  }
+
+/*.mat-form-field-infix {
+  width: 750px !important;
+}*/
