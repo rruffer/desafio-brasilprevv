@@ -1,0 +1,85 @@
+<!-- <div>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" >
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput placeholder="Ex. pat@example.com" formControlName="email">
+      <mat-error *ngIf="form.get('email').hasError('email') && !form.get('email').hasError('required')">
+        Please enter a valid email address
+      </mat-error>
+      <mat-error *ngIf="form.get('email').hasError('required')">
+        Email is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary" >
+      <mat-icon>save</mat-icon> Salvar
+    </button>
+  </form>
+</div> -->
+
+
+<mat-card>
+  <mat-card-content>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div>
+        <h3>Ficha Cadastral</h3>
+      </div>
+      <div fxLayout="column" fxLayoutGap="32px">
+        <mat-form-field>
+          <mat-label>Nome</mat-label>
+          <input type="text" matInput placeholder="Digite seu nome" [(ngModel)]="cliente.nome" formControlName="nome">
+          <mat-error *ngIf="form.get('nome').hasError('required')">
+            Nome é <strong>obrigatório</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div fxLayout="column" fxLayoutGap="32px">
+        <mat-form-field>
+          <mat-label>CPF</mat-label>
+          <input type="text" matInput placeholder="Digite seu cpf" mask="000.000.000-00" [(ngModel)]="cliente.cpf" formControlName="cpf">
+          <mat-error *ngIf="form.get('cpf').hasError('required')">
+            CPF é <strong>obrigatório</strong>
+          </mat-error>
+          <mat-error *ngIf="!form.get('cpf').hasError('required') && form.get('cpf').hasError('cpfInvalido')">
+            CPF <strong>inválido</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div fxLayout="column" fxLayoutGap="32px">
+        <mat-form-field class="example-full-width">
+          <mat-label>Email</mat-label>
+          <input type="email" matInput placeholder="Ex. pat@example.com" [(ngModel)]="cliente.email" formControlName="email">
+          <mat-error *ngIf="form.get('email').hasError('email') && !form.get('email').hasError('required')">
+            Por favor digite um e-mail válido
+          </mat-error>
+          <mat-error *ngIf="form.get('email').hasError('required')">
+            Email é <strong>obrigatório</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div fxLayout="column" fxLayoutGap="32px">
+        <mat-form-field>
+          <mat-label>Total Saldo Aposentadoria</mat-label>
+          <input type="text" matInput placeholder="Ex: 10" mask="000000000" [(ngModel)]="cliente.totalSaldoAposentadoria" formControlName="totalSaldoAposentadoria">
+          <mat-error *ngIf="form.get('nome').hasError('required')">
+            Total Saldo Aposentadoria é <strong>obrigatório</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div fxLayout="column" fxLayoutGap="32px">
+        <mat-form-field>
+          <mat-label>Quantidade Anos Aposentadoria</mat-label>
+          <input type="text" matInput placeholder="Ex: 10" mask="000" [(ngModel)]="cliente.qtdAnosAposentadoria" formControlName="qtdAnosAposentadoria">
+          <mat-error *ngIf="form.get('nome').hasError('required')">
+            Quantidade Anos Aposentadoria é <strong>obrigatório</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <button type="submit" mat-raised-button color="primary">
+         <mat-icon>save</mat-icon>  Salvar
+        </button>
+      </div>
+    </form>
+  </mat-card-content>
+
+</mat-card>

@@ -1,0 +1,15 @@
+<h1 mat-dialog-title class="font-weight-bold text-uppercase text-center">{{data.nome}}</h1>
+<div mat-dialog-content>
+  <mat-list role="list">
+    <!-- <mat-list-item role="listitem"><span class="font-weight-bold mr-1">Nome:</span> {{data.nome}}</mat-list-item> -->
+    <mat-list-item role="listitem"><span class="font-weight-bold mr-1">Cpf:</span> {{data.cpf | mask: '000.000.000-99'}}</mat-list-item>
+    <mat-list-item role="listitem"><span class="font-weight-bold mr-1">E-mail:</span> {{data.email}}</mat-list-item>
+    <mat-list-item role="listitem"><span class="font-weight-bold mr-1">Total Saldo Aposentadoria:</span> {{data.totalSaldoAposentadoria}}</mat-list-item>
+    <mat-list-item role="listitem"><span class="font-weight-bold mr-1">Quantidade Anos Aposentadoria:</span> {{data.qtdAnosAposentadoria}}</mat-list-item>
+  </mat-list>
+  <!-- <mat-dialog-actions>
+    <button mat-raised-button color="primary"mat-dialog-close >
+      <mat-icon>close</mat-icon>
+      Close</button>
+  </mat-dialog-actions> -->
+</div>
