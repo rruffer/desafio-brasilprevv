@@ -1,0 +1,23 @@
+queue:
+  cadastro: cadastro-beneficiario
+  calculo: cadastro-beneficiario
+server:
+  servlet:
+    context-path: /cadastro-beneficio/api
+spring:
+  activemq:
+    broker-url: tcp://localhost:61616
+    in-memory: false
+    pool:
+      enabled: false
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+  data:
+    mongodb:
+      uri: mongodb+srv://rruffer:alucard@cluster0.zkxw0.gcp.mongodb.net/caixaeletronicodb?retryWrites=true&w=majority
+  datasource:
+    driver-class-name: mongodb.jdbc.MongoDriver
+springdoc:
+  swagger-ui:
+    filter: true
+    operationsSorter: method
